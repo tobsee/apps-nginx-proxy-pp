@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0
+
+- Renamed from "add-on" to "app" and moved repository to `tobsee/apps-nginx-proxy-pp`
+- Updated to Alpine 3.23 base image (build config moved from `build.yaml` into the Dockerfile)
+- Dropped deprecated `armhf`, `armv7` and `i386` architectures
+
 ## 0.0.3
 
 - Add mutual TLS (mTLS) support for client certificate verification
