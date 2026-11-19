@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1
+
+- Update to Alpine 3.24 base image
+- Require nginx >= 1.30.7 to fix the known nginx security vulnerabilities
+- Run `apk upgrade` during the image build so security updates are always included
+- Pin `tj-actions/changed-files` to a commit SHA in CI
+
 ## 0.1.0
 
 - Renamed from "add-on" to "app" and moved repository to `tobsee/apps-nginx-proxy-pp`
