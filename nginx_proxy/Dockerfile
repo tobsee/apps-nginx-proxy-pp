@@ -1,11 +1,12 @@
 # https://developers.home-assistant.io/docs/apps/configuration#app-dockerfile
-ARG BUILD_FROM=ghcr.io/home-assistant/base:3.23
+ARG BUILD_FROM=ghcr.io/home-assistant/base:3.24
 FROM ${BUILD_FROM}
 
 # Setup base
-# Upgrade all packages so security fixes (e.g. nginx, openssl) are always picked up
+# Upgrade all packages so security fixes are always picked up and require a
+# nginx release that contains the fixes for the nginx2root CVEs (>= 1.30.7)
 RUN apk upgrade --no-cache \
-    && apk add --no-cache nginx openssl
+    && apk add --no-cache "nginx>=1.30.7" openssl
 
 # Copy data
 COPY rootfs /

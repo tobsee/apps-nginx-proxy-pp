@@ -2,8 +2,10 @@
 
 ## 0.1.1
 
-- Rebuild with the latest Alpine 3.23 packages, including the nginx security fixes
+- Update to Alpine 3.24 base image
+- Require nginx >= 1.30.7 to fix the known nginx security vulnerabilities
 - Run `apk upgrade` during the image build so security updates are always included
+- Pin `tj-actions/changed-files` to a commit SHA in CI
 
 ## 0.1.0
 
