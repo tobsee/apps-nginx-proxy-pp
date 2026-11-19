@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1
+
+- Rebuild with the latest Alpine 3.23 packages, including the nginx security fixes
+- Run `apk upgrade` during the image build so security updates are always included
+
 ## 0.1.0
 
 - Renamed from "add-on" to "app" and moved repository to `tobsee/apps-nginx-proxy-pp`

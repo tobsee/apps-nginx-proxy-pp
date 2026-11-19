@@ -3,7 +3,9 @@ ARG BUILD_FROM=ghcr.io/home-assistant/base:3.23
 FROM ${BUILD_FROM}
 
 # Setup base
-RUN apk add --no-cache nginx openssl
+# Upgrade all packages so security fixes (e.g. nginx, openssl) are always picked up
+RUN apk upgrade --no-cache \
+    && apk add --no-cache nginx openssl
 
 # Copy data
 COPY rootfs /
